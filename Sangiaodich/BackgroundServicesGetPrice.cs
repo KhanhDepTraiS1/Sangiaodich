@@ -145,5 +145,13 @@ namespace Sangiaodich
             Browser?.CloseAsync().Wait();
             GC.SuppressFinalize(this);
         }
+
+
+
+
+        void ABC()
+        {
+
+        }
     }
 }
