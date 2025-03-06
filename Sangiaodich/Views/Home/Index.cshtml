@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    background-color:#091014 !important;
+        }
+
+        .table-priceboard td.pb_red_hightlight {
+            background-color: red !important;
+            color: white !important;
+        }
+
+        .table-priceboard td.pb_yellow_hightlight {
+            background-color: yellow !important;
+            color: black !important;
+        }
+</style>
+
+
+<section id="main">
+    @Html.Partial("HeaderNavbarHome")
+    <div class="container-fluid" style="padding-bottom:20px">
+        <div class="row" style="position:relative;">
+            <div id="20_FO_TF_SQ_divPriceboardList" class=" stock_quote_list" style="height: auto; position: relative; overflow: inherit; display: block;">
+                <table id="20_FO_TF_SQ_tbQuote" class=" table  table-priceboard" style="margin-bottom:0px">
+                    @Html.Partial("BodyHome")
+                    @Html.Partial("HomeLoadingImage")
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

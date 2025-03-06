@@ -1,0 +1,714 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://priceboard.maybank-kimeng.com.vn/Content/cache/innostylelibs_3.0.3.101342_5F787AD577E6AE09F5CF192B4F26E030.css" />
+    <link type="text/css" rel="stylesheet" href="https://priceboard.maybank-kimeng.com.vn/Content/MBKE/i_main_detail.css?version=3.0.3.101342" />
+    <link type="text/css" rel="stylesheet" href="https://priceboard.maybank-kimeng.com.vn/Content/MBKE/i_main.css?version=3.0.3.101342" />
+    <link type="text/css" rel="stylesheet" href="https://priceboard.maybank-kimeng.com.vn/Content/MBKE/custom.css?version=3.0.3.101342" />
+    <link type="text/css" rel="stylesheet" href="https://priceboard.maybank-kimeng.com.vn/Content/MBKE/jwindow.css?version=3.0.3.101342" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/modules.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/LanguageMessage.ashx?lid=vi-vn&amp;ticks=638644282842136888&amp;version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/SystemVariables.ashx?lid=vi-vn&amp;ticks=638644282842136888&amp;version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery-1.10.1.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery-1.10.1.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery/jquery-migrate-1.1.0.js?version=3.0.3.101342"></script>
+</head>
+<body>
+    <nav id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div id="divLogo" class="row">
+                <div class="col-md-12">
+                    <div class="navbar-header">
+
+                        <a href="http://www.maybank-kimeng.com.vn/" target="_blank" id="logo" class="logo"></a>
+
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+
+                        <ul class="nav navbar-nav navbar-right" style="margin-right: -5px">
+                            <li><a id="spotclock"></a></li>
+
+                            <li id="globalAccountContent"></li>
+                            <li>
+                                <a id="show-panel" class="hide-panel"><i class="fa fa-cog" aria-hidden="true"></i> Cấu h&#236;nh</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row mtop5" id="market">
+                <div class="col-md-12">
+                    <div id="indexcode-list">
+                        <ul id="marketBox" class="marketBox">
+                            <li id="0_FO_TF_MI_IndexChart_VNXALL">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_VNXALL"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'VNXALL', 'VNXALL');" title="Chi tiết">VNX-ALL</a>
+                                            <span id="0_FO_TF_MI_VNXALLStatus"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_VNXALLIndex" class="market_index">
+                                            </span><span id="0_FO_TF_MI_VNXALLChange">
+                                                <span id="0_FO_TF_MI_VNXALLChangeValue"></span>
+                                                <span id="0_FO_TF_MI_VNXALLChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_VNXALLTotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_VNXALLTotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_VNXALLAdvances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_VNXALLDeclines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_VNXALLNoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_VNX50">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_VNX50"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'VNX50', 'VNX50');" title="Chi tiết">VNX50</a>
+                                            <span id="0_FO_TF_MI_VNX50Status"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_VNX50Index" class="market_index">
+                                            </span><span id="0_FO_TF_MI_VNX50Change">
+                                                <span id="0_FO_TF_MI_VNX50ChangeValue"></span>
+                                                <span id="0_FO_TF_MI_VNX50ChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_VNX50TotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_VNX50TotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_VNX50Advances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_VNX50Declines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_VNX50NoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_HOSE">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_HOSE"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'HOSE', 'HOSE');" title="Chi tiết">HSX</a>
+                                            <span id="0_FO_TF_MI_HOSEStatus"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_HOSEIndex" class="market_index">
+                                            </span><span id="0_FO_TF_MI_HOSEChange">
+                                                <span id="0_FO_TF_MI_HOSEChangeValue"></span>
+                                                <span id="0_FO_TF_MI_HOSEChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_HOSETotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_HOSETotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_HOSEAdvances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_HOSEDeclines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_HOSENoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_VN30">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_VN30"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'VN30', 'VN30');" title="Chi tiết">VN30</a>
+                                            <span id="0_FO_TF_MI_VN30Status"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_VN30Index" class="market_index">
+                                            </span><span id="0_FO_TF_MI_VN30Change">
+                                                <span id="0_FO_TF_MI_VN30ChangeValue"></span>
+                                                <span id="0_FO_TF_MI_VN30ChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_VN30TotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_VN30TotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_VN30Advances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_VN30Declines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_VN30NoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_HNX">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_HNX"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'HNX', 'HNX');" title="Chi tiết">HNX</a>
+                                            <span id="0_FO_TF_MI_HNXStatus"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_HNXIndex" class="market_index">
+                                            </span><span id="0_FO_TF_MI_HNXChange">
+                                                <span id="0_FO_TF_MI_HNXChangeValue"></span>
+                                                <span id="0_FO_TF_MI_HNXChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_HNXTotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_HNXTotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_HNXAdvances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_HNXDeclines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_HNXNoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_HNX30">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_HNX30"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'HNX30', 'HNX30');" title="Chi tiết">HNX30</a>
+                                            <span id="0_FO_TF_MI_HNX30Status"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_HNX30Index" class="market_index">
+                                            </span><span id="0_FO_TF_MI_HNX30Change">
+                                                <span id="0_FO_TF_MI_HNX30ChangeValue"></span>
+                                                <span id="0_FO_TF_MI_HNX30ChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_HNX30TotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_HNX30TotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_HNX30Advances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_HNX30Declines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_HNX30NoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_UPCOM">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_UPCOM"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'UPCOM', 'UPCOM');" title="Chi tiết">UPCOM</a>
+                                            <span id="0_FO_TF_MI_UPCOMStatus"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_UPCOMIndex" class="market_index">
+                                            </span><span id="0_FO_TF_MI_UPCOMChange">
+                                                <span id="0_FO_TF_MI_UPCOMChangeValue"></span>
+                                                <span id="0_FO_TF_MI_UPCOMChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_UPCOMTotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_UPCOMTotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_UPCOMAdvances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_UPCOMDeclines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_UPCOMNoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                            <li id="0_FO_TF_MI_IndexChart_VNSI">
+                                <table>
+                                    <tr class="indexChart hidden-xs" style="display:none">
+                                        <td colspan="2">
+                                            <div style="width:100%; min-height:100px; display:block;" id="0_FO_TF_MI_divIndexChart_VNSI"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+
+                                            <a class="marketBoxTitle marketCode" onclick="return PriceBoard_getFilterByClick('20_FO_TF_SQ', 'VNSI', 'VNSI');" title="Chi tiết">VNSI</a>
+                                            <span id="0_FO_TF_MI_VNSIStatus"></span>
+                                        </td>
+                                        <td>
+                                            <span id="0_FO_TF_MI_VNSIIndex" class="market_index">
+                                            </span><span id="0_FO_TF_MI_VNSIChange">
+                                                <span id="0_FO_TF_MI_VNSIChangeValue"></span>
+                                                <span id="0_FO_TF_MI_VNSIChangePercent"></span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <span class="marketBoxTitle">KLGD</span><span id="0_FO_TF_MI_VNSITotalVolume"></span>
+                                        </td>
+                                        <td>
+                                            <span class="marketBoxTitle">GTGD</span><span id="0_FO_TF_MI_VNSITotalValue"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="boxChange">
+                                            <i class="fa fa-arrow-up total_advances" aria-hidden="true"></i><span class="marketBoxTitle total_advances" id="0_FO_TF_MI_VNSIAdvances"></span><i class="fa fa-arrow-down total_declines" aria-hidden="true"></i><span class="total_declines marketBoxTitle" id="0_FO_TF_MI_VNSIDeclines"></span><i class="fa fa-square total_nochanges" aria-hidden="true"></i><span class="total_nochanges marketBoxTitle" id="0_FO_TF_MI_VNSINoChange"></span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                        <a class="prev" id="indexcode_prev" title="" href="#"><span></span></a>
+                        <a class="next" id="indexcode_next" title="" href="#"><span></span></a>
+                    </div>
+
+                    <a class="btnViewBoard indexChart-switch fa fa-chevron-down hidden-xs" title="Ẩn/Hiện biểu đồ"></a>
+                    <script type="text/javascript">
+                        jQuery(document).ready(function ($) {
+                            var owl = $('#marketBox');
+                            owl.on('initialize.owl.carousel initialized.owl.carousel ' +
+                                'initialize.owl.carousel initialize.owl.carousel ' +
+                                'resize.owl.carousel resized.owl.carousel ' +
+                                'refresh.owl.carousel refreshed.owl.carousel ' +
+                                'update.owl.carousel updated.owl.carousel ' +
+                                'drag.owl.carousel dragged.owl.carousel ' +
+                                'translate.owl.carousel translated.owl.carousel ' +
+                                'to.owl.carousel changed.owl.carousel', function (e) {
+                                    $('.' + e.type).removeclass('secondary').addclass('success');
+
+                                    window.settimeout(function () {
+                                        $('.' + e.type)
+                                            .removeclass('success')
+                                            .addclass('secondary');
+                                    }, 500);
+                                });
+                            owl.owlCarousel({
+                                items: 5, //10 items above 1000px browser width
+                                itemsDesktop: [1024, 4], //5 items between 1000px and 901px
+                                itemsDesktopSmall: [900, 3], // 3 items betweem 900px and 601px
+                                itemsTablet: [600, 1], //2 items between 600 and 0;
+                                itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+
+                                responsive: {
+                                    0: {
+                                        items: 1
+                                    },
+                                    320: {
+                                        items: 1
+                                    },
+                                    425: {
+                                        items: 1
+                                    },
+                                    600: {
+                                        items: 2
+                                    },
+                                    768: {
+                                        items: 3
+                                    },
+                                    800: {
+                                        items: 3
+                                    },
+                                    960: {
+                                        items: 3,
+                                    },
+                                    1204: {
+                                        items: 4
+                                    },
+                                    1280: {
+                                        items: 5
+                                    },
+                                    1920: {
+                                        items: 5
+                                    }
+                                },
+                                loop: true,
+                                lazyLoad: true,
+                                autoPlay: false,
+                                navigation: false,
+                                pagination: false,
+                                itemsScaleUp: true
+                            });
+
+                            $('#indexcode_prev').unbind('click').on('click', function () {
+                                owl.trigger('owl.prev');
+                            });
+
+                            $('#indexcode_next').unbind('click').on('click', function () {
+                                owl.trigger('owl.next');
+                            });
+                        });
+
+                        $(".indexChart-switch").click(function () {
+                            if ($(this).hasClass("fa-chevron-up")) {
+                                $(this).removeClass("fa-chevron-up");
+                                $(this).addClass("fa-chevron-down");
+                                $("#marketBox table tr:first-child.indexChart").hide();
+
+                                $("body").css({ "padding-top": "" });
+                            }
+                            else {
+                                $("#marketBox").css({ "padding-top": "0" });
+                                $(this).removeClass("fa-chevron-down");
+                                $(this).addClass("fa-chevron-up");
+                                $("#marketBox table tr:first-child.indexChart").show(function () {
+                                    $(this).attr("style", "");
+                                });
+
+                                var headerHeight = $("#header").height() - 5; //- mtop5 of market
+                                $("body").css({ "padding-top": headerHeight + "px" });
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+            <section id="tblSession" style="display:none;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <table border="0" cellspacing="2" cellpadding="0" width="100%">
+                                <tr>
+                                    <td rowspan="2" class="Name">
+                                        Đợt &nbsp;1:
+                                    </td>
+                                    <td class="Index">
+                                        VN-Index
+                                        :&nbsp; <span id="HOSE_spanIndex0"></span>&nbsp;<span id="HOSE_spanChange0"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Trade">
+                                        KLGD:&nbsp;<span id="HOSE_spanVol0"></span>&nbsp;
+                                        GTGD:&nbsp;<span id="HOSE_spanVal0"></span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="col-xs-4">
+
+                            <table border="0" cellspacing="2" cellpadding="0" width="100%">
+                                <tr>
+                                    <td rowspan="2" class="Name">
+                                        Đợt &nbsp;2:
+                                    </td>
+                                    <td class="Index">
+                                        VN-Index:&nbsp; <span id="HOSE_spanIndex1">
+                                        </span>&nbsp;<span id="HOSE_spanChange1"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Trade">
+                                        KLGD:&nbsp;<span id="HOSE_spanVol1"></span>&nbsp;
+                                        GTGD:&nbsp;<span id="HOSE_spanVal1"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-4">
+
+                            <table border="0" cellspacing="2" cellpadding="0" width="100%">
+                                <tr>
+                                    <td rowspan="2" class="Name">
+                                        Đợt &nbsp;3:
+                                    </td>
+                                    <td class="Index">
+                                        VN-Index:&nbsp; <span id="HOSE_spanIndex2">
+                                        </span>&nbsp;<span id="HOSE_spanChange2"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Trade">
+                                        KLGD:&nbsp;<span id="HOSE_spanVol2"></span>&nbsp;
+                                        GTGD:&nbsp;<span id="HOSE_spanVal2"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </nav>
+    <input type="hidden" id="AppId" value="" />
+    <input type="hidden" id="AppSecret" value="" />
+    <div class="panel-list">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a title="Đ&#243;ng" class="btn-floatRightMenuClose" href="javascript:void(0)" onclick="return PriceBoardCloseConfig();"><i class="fa fa-close" aria-hidden="true"></i></a>
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <ul class="langList">
+                                    <li class="title"><strong>Ng&#244;n ngữ</strong></li>
+                                    <li>
+                                        <a class="img_pngFix" title="Tiếng Việt" href="?lang=vi-vn" id="langVietname"></a>
+                                    </li>
+                                    <li>
+                                        <a class="img_pngFix" title="English" href="?lang=en-us" id="langEnglish"></a>
+                                    </li>
+
+                                </ul>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <ul class="themeList">
+                                    <li class="title">
+                                        <strong>Giao diện</strong>
+                                    </li>
+                                    <li>
+                                        <a class="theme-default" title="Mặc định" href="?Themes=1">Mặc định</a>
+                                    </li>
+                                    <li>
+                                        <a class="theme-white" title="M&#224;u trắng" href="?Themes=2">M&#224;u trắng</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <fieldset>
+                                    <legend>Cấu h&#236;nh</legend>
+                                    <table class="table table-responsive">
+                                        <tr>
+                                            <td>Kiểu bảng</td>
+                                            <td>
+                                                <select class="form-control w200" id="priceBoardType">
+                                                    <option value="Normal">B&#236;nh thường</option>
+                                                    <option value="Scrolling">Cuộn trang</option>
+                                                    <option value="Paging">Lật trang</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Độ trễ cuộn trang (mili gi&#226;y)</td>
+                                            <td>
+                                                <input type="number" id="priceBoardScrollingTime" value="50" maxlength="5" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thởi gian lật trang (mili gi&#226;y)</td>
+                                            <td>
+                                                <input type="number" id="priceBoardPagingTime" value="5000" maxlength="5" class="form-control" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hiển thị</td>
+                                            <td>
+                                                <table>
+                                                    <tr>
+                                                        <td><input id="cbMarketDetail" type="checkbox"> Th&#244;ng tin khớp từng phi&#234;n s&#224;n HSX</td>
+                                                    </tr>
+                                                    <tr><td><input id="cbSymbol2" type="checkbox"> M&#227; CK (&#244; khớp lệnh)</td></tr>
+                                                    <tr><td><input id="cbPTTotalQtty" checked="checked" type="checkbox"> Cột KLGD Thỏa thuận</td></tr>
+                                                    <tr><td><input id="cbOpenPrice" checked="checked" type="checkbox"> Mở cửa</td></tr>
+                                                    <tr><td><input id="cbHighestPrice" checked="checked" type="checkbox"> Cao nhất</td></tr>
+                                                    <tr><td><input id="cbLowestPrice" checked="checked" type="checkbox"> Thấp nhất</td></tr>
+                                                    <tr><td><input id="cbAvgPrice" checked="checked" type="checkbox"> Trung b&#236;nh</td></tr>
+                                                    <tr><td><input id="cbRemainRoomPercent" checked="checked" type="checkbox"> % Room NN c&#242;n lại</td></tr>
+                                                    <tr><td><input id="cbEnableETF" checked="checked" type="checkbox"> Hiển thị c&#225;c m&#227; ETF</td></tr>
+                                                    <tr><td><input id="cbEnableTotalShares2" type="checkbox"> Hiển cột KLGD, +/- Gi&#225; sau cột Dư b&#225;n</td></tr>
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2" class="text-center">
+                                                <input type="button" id="btnPanelSave" class="btn btn-warning" onclick="return PriceBoardSaveConfig();" value="Lưu" />
+                                                <input type="button" id="btnPanelClose" class="btn btn-default" onclick="return PriceBoardCloseConfig();" value="Đ&#243;ng" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </fieldset>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clearfix mtop5">
+    </div>
+    <section id="main">
+        @RenderBody()
+    </section>
+    <div class="inno_scroll_top">
+        <a title="Đầu trang" href="javascript:void(0)" id="scroll_top" style="transform: translateX(0px);">
+            <i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+        </a>
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer-bottom">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 pull-left">
+                        <div class="price_notice_text left">Bản quyền <sup>&copy;</sup>Công ty TNHH CK Maybank. Cung cấp bởi <a href="http://www.innotech.vn" target="_blank">InnoTech</a></div>
+                        <span data-for="interval" id="conntectMode">Interval</span>
+                        <span id="connectStatus" class="status_connected">Đ&#227; kết nối</span>
+                    </div>
+                    <div class="col-md-6 pull-right">
+                        <div class="price_notice_text right" id="Underlying_PriceBoard_Note">Đơn vị gi&#225;: 1000 đồng - Đơn vị khối lượng: 1 cổ phiếu</div>
+                        <div class="price_notice_text right" id="Derivatives_PriceBoard_Note" style="display:none">HĐ Chỉ số: Gi&#225; x1; Khối lượng x1 | HĐ Tr&#225;i phiếu: Gi&#225; x1; Khối lượng x1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        $(window).scroll(function () {
+            var winHeight = $(window).scrollTop() + $(window).height();
+            if (winHeight > $(window).height() + 100) {
+                $(".inno_scroll_top").show();
+                $('#scroll_top').css("transform", "translateX(0px)");
+            }
+            else {
+                $(".inno_scroll_top").hide();
+                $('#scroll_top').css("transform", "translateX(150px)");
+            }
+        });
+        $('#scroll_top').click(function (e) {
+            e.preventDefault(); $('body,html').stop().animate({ scrollTop: 0 }, 800, 'easeInQuad')
+            return false;
+        });
+    </script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/agrid.min.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/ui/jquery-ui-1.10.3.min.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/bootstrap.min.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/autocomplete/bootstrap3-typeahead.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/ensure.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.md5.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.pulse.min.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/owlcarousel/owl-carousel/owl.carousel.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/common.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/Responsive/app.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/shortcut.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jqdock_202/jquery.jqDock.min.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jdesktop.1.0.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/autocomplete/autocomplete.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/AutoComplete.ashx?version=3.0.3.101342&amp;lid=vi-vn&amp;ticks=638644282842136888"></script>
+
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/boxover.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.numeric.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/multiaccount/MultiAccount.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.alerts/jquery.alerts_responsive.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/simplemodal/jquery.simplemodal.1.4.5.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.cookie.pack.js?version=3.0.3.101342"></script>
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/libs/jquery.json/jquery.json-2.3.min.js?version=3.0.3.101342"></script>
+
+    <script type="text/javascript" src="https://priceboard.maybank-kimeng.com.vn/Scripts/responsive/custom.js?version=3.0.3.101342"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

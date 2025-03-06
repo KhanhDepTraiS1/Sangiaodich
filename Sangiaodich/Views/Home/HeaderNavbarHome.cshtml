@@ -1,0 +1,75 @@
+﻿<div class="container-fluid feature-tab" name="PutThroughBoard" id="20_FO_TF_SQ_PriceBoardTab">
+    <div class=" row">
+        <div class="contentOptionItemPB fl">
+            <ul class="menuTab">
+                <li data-for="Favorite" class="20_FO_TF_SQ_favlink subPriceBoardTab">
+                    <a href="javascript:void(0);">Yêu thích</a>
+                    <ul id="20_FO_TF_SQ_ulFavorite" class="dropdown-menu ulFavorite"><li id="createFavorite" class="create_favorite"><a href="javascript:void(0)" onclick="openManageFavoriteList('20_FO_TF_SQ')">Quản lý danh sách yêu thích</a></li></ul>
+                </li>
+                <li data-for="HOSE" class="subPriceBoardTab active">
+                    <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','HOSE', 'HOSE');">
+                        HSX
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="extSubMenu" data-for="VNXALL">
+                            <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','VNXALL', 'VNXALL');">
+                                VNX-ALL
+                            </a>
+                        </li>
+                        <li class="extSubMenu" data-for="VNX50">
+                            <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','VNX50', 'VNX50');">
+                                VNX50
+                            </a>
+                        </li>
+                        <li class="extSubMenu" data-for="VNSI">
+                            <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','VNSI', 'VNSI');">
+                                VNSI
+                            </a>
+                        </li>
+                        <li class="extSubMenu" data-for="HOSE">
+                            <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','HOSE', 'HOSE');">
+                                HSX
+                            </a>
+                        </li>
+                        <li class="extSubMenu" data-for="VN30">
+                            <a href="javascript:void(0)" onclick="PriceBoard_getFilter('20_FO_TF_SQ','VN30', 'VN30');">
+                                VN30
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contentOptionItemPB fr">
+            <a rel="tabViewMode" class="btnViewBoard priceMode1 boardActive" onclick="javascript:changeViewPriceboard('20_FO_TF_SQ', 'List', this);" title="Xem dạng danh sách"></a>
+            <a rel="tabViewMode" class="btnViewBoard priceMode2" onclick="javascript:changeViewPriceboard('20_FO_TF_SQ', 'Card', this);" title="Xem dạng thẻ"></a>
+        </div>
+        <div class="contentOptionItemPB fr form-inline boxPriceBoardOpt">
+            <div class="form-group">
+
+                <input id="20_FO_TF_SQ_txtAddNewStock" class="form-control stock-control" onkeydown="return PriceBoard_checkOnKeyDown(event, '20_FO_TF_SQ');" onkeyup="return PriceBoard_checkOnKeyUp(event, '20_FO_TF_SQ');" onkeypress="return PriceBoard_checkOnKeyPress(event, '20_FO_TF_SQ');" tabindex="10" autocomplete="off" type="text" placeholder="Mã CK">
+            </div>
+
+            <input type="button" class="btn btn-primary" id="20_FO_TF_SQ_btnPriceBoardView" onclick="return viewStock('20_FO_TF_SQ');" value="Xem">
+            <input type="button" class="btnDisabled btn btn-primary" id="20_FO_TF_SQ_btnPriceBoardAdd" onclick="return addNewStock('20_FO_TF_SQ');" value="Thêm" disabled="disabled">
+        </div>
+        <div class="contentOptionItemPB fr boxPriceBoardOpt">
+            <select id="20_FO_TF_SQ_selFilter" class="form-control w110" onchange="PriceBoard_onChangeComboboxFilter('20_FO_TF_SQ');" style="visibility: visible;">
+                <option value="-1" selected="selected">HSX</option>
+                <option value="Totalshares_DESC">HSX &gt;        Giao dịch nhiều nhất (KL lớn) </option>
+                <option value="TotalValue_DESC">HSX &gt;        Giao dịch lớn nhất (Giá trị GD) </option>
+                <option value="Change_DESC">HSX &gt;        Cổ phiếu được giá nhất </option>
+                <option value="ChangePercent_DESC">HSX &gt;        Cổ phiếu được giá nhất (%) </option>
+                <option value="Change_ASC">HSX &gt;        Cổ phiếu mất giá nhất</option>
+                <option value="ChangePercent_ASC">HSX &gt;        Cổ phiếu mất giá nhất (%)</option>
+                <option value="UnChange_DESC">HSX &gt;        Giao dịch không đổi</option>
+            </select>
+        </div>
+        <div class="contentOptionItemPB fr mr40" style="display: none">
+            <input type="button" class="btn btn-primary" id="20_FO_TF_SQ_btnChoosedView" value="">
+        </div>
+        <div class="contentOptionItemPB fl loader" id="20_FO_TF_SQ_loader" style="display: none;"><img alt="" src="Content/MBKE/Images/loadingsmall.gif"></div>
+
+    </div>
+</div>

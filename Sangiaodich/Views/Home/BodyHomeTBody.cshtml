@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Quote List";
+}
+<tbody id="20_FO_TF_SQ_tbodyQuote">
+    <tr>
+        <td>Đang loading data...</td>
+    </tr>
+</tbody>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        loadQuotes();
+        setInterval(loadQuotes, 2000);
+        function loadQuotes() {
+            $.ajax({
+                url: '/BodyHomeTBody/GetPrice',
+                type: 'GET',
+                success: function (data) {
+                    let tbody = $('#20_FO_TF_SQ_tbodyQuote');
+                    tbody.empty();
+
+                    if (data.length > 0) {
+                        data.forEach(function (item) {
+                            tbody.append(item);
+                        });
+                    } else {
+                        tbody.append('<tr><td>Không có dữ liệu</td></tr>');
+                    }
+                },
+                error: function () {
+                    alert('Lỗi khi tải dữ liệu.');
+                }
+            });
+        }
+    });
+</script>
